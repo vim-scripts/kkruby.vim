@@ -17,7 +17,7 @@ hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
 "highlight Normal                    guifg=#E6E1DC guibg=#090909
-highlight Normal                    guifg=#e1d1df guibg=#080808
+highlight Normal                    guifg=#d1c1cf guibg=#070706
 highlight Cursor                    guifg=#FFFFFF ctermfg=0 guibg=#FFFFFF ctermbg=15	
 highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
 
@@ -45,7 +45,7 @@ highlight DiffDelete                guifg=#E6E1DC ctermfg=7 guibg=#660000 ctermb
 highlight Special                   guifg=#bb3333 ctermfg=167 
 
 highlight rubyBlockParameter        guifg=#7bcfff ctermfg=15
-highlight rubyClass                 guifg=#ee5969 ctermfg=15
+highlight rubyClass                 guifg=#8eb999 ctermfg=15
 highlight rubyConstant              guifg=#72b6ff ctermfg=167
 highlight rubyInstanceVariable      guifg=#4596ff ctermfg=189
 highlight rubyInterpolation         guifg=#d990de ctermfg=107
@@ -78,7 +78,7 @@ highlight mailSubject               guifg=#A5C261 ctermfg=107
 highlight mailHeaderKey             guifg=#FFC66D ctermfg=221
 highlight mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
 highlight rubyModule                guifg=#ef5969
-highlight rubyDefine                guifg=#00994D
+highlight rubyDefine                guifg=#a0499D
 highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
 highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight SpellCap                  guifg=#ff000F ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
