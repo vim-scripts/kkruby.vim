@@ -16,12 +16,11 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-"highlight Normal                    guifg=#E6E1DC guibg=#090909
-highlight Normal                    guifg=#d1c1cf guibg=#070706
+highlight Normal                    guifg=#c1c1c1 guibg=#050706
 highlight Cursor                    guifg=#FFFFFF ctermfg=0 guibg=#FFFFFF ctermbg=15	
 highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
 
-highlight Comment                   guifg=#76d676 ctermfg=180
+highlight Comment                   guifg=#66b666 ctermfg=180
 highlight Constant                  guifg=#4596ff ctermfg=73
 highlight Define                    guifg=#ff6458 ctermfg=173
 highlight Error                     guifg=#FFC66D ctermfg=221 guibg=#990000 ctermbg=88
@@ -35,7 +34,7 @@ highlight Number                    guifg=#A5C261 ctermfg=107
 highlight PreProc                   guifg=#CC7833 ctermfg=103
 highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
 highlight Statement                 guifg=#ff6458 ctermfg=173 gui=NONE cterm=NONE
-highlight String                    guifg=#e6f881 ctermfg=107
+highlight String                    guifg=#d6d881 ctermfg=107
 highlight Title                     guifg=#CC7833 ctermfg=15
 highlight Type                      guifg=#DA4939 ctermfg=167 gui=NONE cterm=NONE
 highlight Visual                    guibg=#5A647E ctermbg=60
@@ -60,12 +59,13 @@ highlight rubyIdentifier            guifg=#58c353     ctermfg=143
 highlight rubyOperator              guifg=#0000ff     ctermfg=143
 highlight rubyInclude               guifg=#888888
 "if 条件
-highlight rubyConditional           guifg=#bf3030
+highlight rubyConditional           guifg=#b34040
 highlight rubyOptionalDo            guifg=#ff0000
 "单行操作符
 highlight rubyConditionalModifier   guifg=#6f40a8
-highlight rubyControl               guifg=#8fe040
-highlight rubyClassVariable         guifg=#3f0000
+"do end
+highlight rubyControl               guifg=#afbf00
+highlight rubyClassVariable         guifg=#7f3030
 highlight rubyAttribute             guifg=#af0b15
 highlight rubyEval                  guifg=#48d1f0
 
@@ -78,7 +78,7 @@ highlight mailSubject               guifg=#A5C261 ctermfg=107
 highlight mailHeaderKey             guifg=#FFC66D ctermfg=221
 highlight mailEmail                 guifg=#A5C261 ctermfg=107 gui=italic cterm=underline
 highlight rubyModule                guifg=#ef5969
-highlight rubyDefine                guifg=#a0499D
+highlight rubyDefine                guifg=#c0399D
 highlight SpellBad                  guifg=#D70000 ctermfg=160 ctermbg=NONE cterm=underline
 highlight SpellRare                 guifg=#D75F87 ctermfg=168 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 highlight SpellCap                  guifg=#ff000F ctermfg=189 guibg=NONE ctermbg=NONE gui=underline cterm=underline
