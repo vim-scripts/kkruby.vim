@@ -16,7 +16,7 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-highlight Normal                    guifg=#c1c1c1 guibg=#050706
+highlight Normal                    guifg=#c1c1c1 guibg=#030303
 highlight Cursor                    guifg=#FFFFFF ctermfg=0 guibg=#FFFFFF ctermbg=15	
 highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
 
@@ -34,38 +34,39 @@ highlight Number                    guifg=#A5C261 ctermfg=107
 highlight PreProc                   guifg=#CC7833 ctermfg=103
 highlight Search                    guifg=NONE ctermfg=NONE guibg=#2b2b2b ctermbg=235 gui=italic cterm=underline
 highlight Statement                 guifg=#ff6458 ctermfg=173 gui=NONE cterm=NONE
-highlight String                    guifg=#d6d881 ctermfg=107
+highlight String                    guifg=#c6c081 ctermfg=107
 highlight Title                     guifg=#CC7833 ctermfg=15
 highlight Type                      guifg=#DA4939 ctermfg=167 gui=NONE cterm=NONE
 highlight Visual                    guibg=#5A647E ctermbg=60
 
 highlight DiffAdd                   guifg=#E6E1DC ctermfg=7 guibg=#519F50 ctermbg=71
 highlight DiffDelete                guifg=#E6E1DC ctermfg=7 guibg=#660000 ctermbg=52
-highlight Special                   guifg=#bb3333 ctermfg=167 
+"#字符串里的 #{}
+highlight Special                   guifg=#8b7b23 ctermfg=167 
 
-highlight rubyBlockParameter        guifg=#7bcfff ctermfg=15
-highlight rubyClass                 guifg=#8eb999 ctermfg=15
-highlight rubyConstant              guifg=#72b6ff ctermfg=167
-highlight rubyInstanceVariable      guifg=#4596ff ctermfg=189
+highlight rubyBlockParameter        guifg=#7bcf3f ctermfg=15
+highlight rubyClass                 guifg=#9ee959 ctermfg=15
+highlight rubyConstant              guifg=#72b6ef ctermfg=167
+highlight rubyInstanceVariable      guifg=#4596ef ctermfg=189
 highlight rubyInterpolation         guifg=#d990de ctermfg=107
-highlight rubyLocalVariableOrMethod guifg=#d990de ctermfg=189
+highlight rubyLocalVariableOrMethod guifg=#d9903e ctermfg=189
 highlight rubyPredefinedConstant    guifg=#4596ff ctermfg=167
 highlight rubyPseudoVariable        guifg=#4596ff ctermfg=221
 highlight rubyStringDelimiter       guifg=#99cf50 ctermfg=143
 
 "全局变量$
-highlight rubyIdentifier            guifg=#58c353     ctermfg=143
+highlight rubyIdentifier            guifg=#d85379     ctermfg=143
 
 highlight rubyOperator              guifg=#0000ff     ctermfg=143
 highlight rubyInclude               guifg=#888888
 "if 条件
-highlight rubyConditional           guifg=#b34040
+highlight rubyConditional           guifg=#c34029
 highlight rubyOptionalDo            guifg=#ff0000
 "单行操作符
 highlight rubyConditionalModifier   guifg=#6f40a8
-"do end
-highlight rubyControl               guifg=#afbf00
-highlight rubyClassVariable         guifg=#7f3030
+"do end and not next return loop 
+highlight rubyControl               guifg=#33a3d0
+highlight rubyClassVariable         guifg=#fff030
 highlight rubyAttribute             guifg=#af0b15
 highlight rubyEval                  guifg=#48d1f0
 
