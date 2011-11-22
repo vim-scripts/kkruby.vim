@@ -16,11 +16,12 @@ hi link htmlTag                     xmlTag
 hi link htmlTagName                 xmlTagName
 hi link htmlEndTag                  xmlEndTag
 
-highlight Normal                    guifg=#d1c9c9 guibg=#030303
+highlight Normal                    guifg=#e1cad1 guibg=#1f1f1f
 highlight Cursor                    guifg=#FFFFFF ctermfg=0 guibg=#FFFFFF ctermbg=15	
-highlight CursorLine                guibg=#000000 ctermbg=233 cterm=NONE
+highlight CursorLine                guibg=#1bdc3d ctermbg=233 cterm=NONE
 
-highlight Comment                   guifg=#7a9931 ctermfg=180
+highlight Comment                   guifg=#d0ae26 ctermfg=180
+
 highlight Constant                  guifg=#4596ff ctermfg=73
 highlight Define                    guifg=#ff6458 ctermfg=173
 highlight Error                     guifg=#FFC66D ctermfg=221 guibg=#990000 ctermbg=88
@@ -48,6 +49,7 @@ highlight Special                   guifg=#8b7b23 ctermfg=167
 
 highlight rubyBlockParameter        guifg=#7bcf3f ctermfg=15
 highlight rubyClass                 guifg=#9ee959 ctermfg=15
+
 highlight rubyConstant              guifg=#72b6ef ctermfg=167
 highlight rubyInstanceVariable      guifg=#4596ef ctermfg=189
 highlight rubyInterpolation         guifg=#d990de ctermfg=107
@@ -59,15 +61,17 @@ highlight rubyStringDelimiter       guifg=#99cf50 ctermfg=143
 "全局变量$
 highlight rubyIdentifier            guifg=#b021e0     ctermfg=143
 
-highlight rubyOperator              guifg=#0000ff     ctermfg=143
+highlight rubyOperator              guifg=#4233ff     ctermfg=143
 highlight rubyInclude               guifg=#888888
-"if 条件
-highlight rubyConditional           guifg=#cfd830
+"if end 条件
+highlight rubyConditional           guifg=#4e79de
+
 highlight rubyOptionalDo            guifg=#ff0000
 "单行操作符
 highlight rubyConditionalModifier   guifg=#816cd0
+
 "do end and not next return loop 
-highlight rubyControl               guifg=#0bca3a
+highlight rubyControl               guifg=#bc2525
 highlight rubyClassVariable         guifg=#fff030
 highlight rubyAttribute             guifg=#af0b15
 highlight rubyEval                  guifg=#48d1f0
