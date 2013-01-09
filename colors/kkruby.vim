@@ -7,33 +7,42 @@
 " Chris Kempson's Tomorrow
 
 " Default GUI Colours
-let s:foreground   = "b8b1d3"
-let s:background   = "181818"
-"let s:background   = "000000"
+let s:foreground   = "c0bfbf"
+let s:background   = "101010"
+let s:bg1   = "111111"
+let s:bg2   = "050505"
+let s:bg2   = "0f0f0f"
+let s:bg3   = "171717"
+let s:bg4   = "1f1f1f"
+let s:bg5   = "272727"
+let s:bg6   = "2f272f"
+let s:bg7   = "372737"
 let s:tabselection = "506775"
 let s:selection    = "eE1F29"
 
 "cursor
-let s:line         = "81969A"
+let s:line         = "81869A"
 let s:status_line  = "202527"
 let s:cursorline   = "2F393C"
 let s:statusline   = "4A5A5F"
-let s:comment      = "3d8bdd"
-let s:red          = "e77481"
+let s:comment      = "ad6b1d"
+let s:red          = "e76481"
 let s:diff_red     = "542D32"
 let s:orange       = "CAaC81"
 let s:diff_orange  = "574133"
 let s:task_tag     = "A58B61"
-let s:yellow       = "E8E2B7"
-let s:yellow       = "E8E297"
+let s:yellow       = "e8e267"
 let s:green        = "93C79F"
 let s:diff_green   = "3E5443"
 let s:aqua         = "53ccc2"
-let s:blue         = "da6627"
+let s:blue         = "aa46c8"
 let s:dark_blue    = "4E778E"
 let s:diff_blue    = "2E4754"
-let s:purple       = "A082BD"
+let s:purple       = "A072BD"
+let s:cond         = "ee829D"
 let s:window       = "616161"
+let s:xml_tag      = "a87F4A"
+let s:xml_end      = "E03F8A"
 
 set background=dark
 hi clear
@@ -271,7 +280,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("VertSplit", s:window, s:window, "none")
   call <SID>X("Visual", "", s:selection, "none")
   call <SID>X("Directory", s:blue, "", "")
-  call <SID>X("ModeMsg", s:green, "", "")
+  call <SID>X("ModeMsg", "83cc9f", "", "")
   call <SID>X("MoreMsg", s:green, "", "")
   call <SID>X("Question", s:green, "", "")
   call <SID>X("WarningMsg", s:red, "", "")
@@ -280,13 +289,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("FoldColumn", "", s:background, "")
   if version >= 700
     call <SID>X("CursorLine", "", s:cursorline, "none")
-    call <SID>X("Cursor", "", s:line, "none")
+    call <SID>X("Cursor", "", s:line, "underline")
     call <SID>X("CursorColumn", "", s:line, "none")
     call <SID>X("PMenu", s:foreground, s:selection, "none")
     call <SID>X("PMenuSel", s:foreground, s:selection, "reverse")
   end
   if version >= 703
-    call <SID>X("ColorColumn", "", s:line, "none")
+    call <SID>X("ColorColumn", "", "8181ee" , "none")
   end
 
   " Standard Highlighting
@@ -294,20 +303,20 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("Todo", s:comment, s:background, "")
   call <SID>X("Title", s:comment, "", "")
   call <SID>X("Identifier", s:red, "", "none")
-  call <SID>X("Statement", s:foreground, "", "")
-  call <SID>X("Conditional", s:foreground, "", "")
-  call <SID>X("Repeat", s:foreground, "", "")
+  call <SID>X("Statement", "fa6203" , "", "")
+  call <SID>X("Conditional", "22ee11", "", "")
+  call <SID>X("Repeat", "345678" , "88aaaa", "")
   call <SID>X("Structure", s:purple, "", "")
   call <SID>X("Function", s:blue, "", "")
   call <SID>X("Constant", s:orange, "", "")
-  call <SID>X("String", s:green, "", "")
-  call <SID>X("Special", s:foreground, "", "")
+  call <SID>X("String", "1baf10", "", "")
+  call <SID>X("Special","ab8b83", "", "")
   call <SID>X("PreProc", s:purple, "", "")
   call <SID>X("Operator", s:aqua, "", "none")
   call <SID>X("Type", s:blue, "", "none")
   call <SID>X("Define", s:purple, "", "none")
   call <SID>X("Include", s:blue, "", "")
-  "call <SID>X("Ignore", "666666", "", "")
+  call <SID>X("Ignore", "666666", "", "")
 
   " Vim Highlighting
   call <SID>X("vimCommand", s:red, "", "none")
@@ -315,28 +324,44 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   " C Highlighting
   call <SID>X("cType", s:yellow, "", "")
   call <SID>X("cStorageClass", s:purple, "", "")
-  call <SID>X("cConditional", s:purple, "", "")
+  call <SID>X("cConditional", s:cond, "", "")
   call <SID>X("cRepeat", s:purple, "", "")
+  call <SID>X("cCppOutWrapper","aacc99" , "", "")
+  call <SID>X("cPreCondit","3a9ce9" , "", "")
+  call <SID>X("cDefine","4acc49" , "", "")
+  call <SID>X("cPreConditMatch","3a9ce9" , "", "")
+  call <SID>X("cOperator","aa5ce9" , "", "")
+  call <SID>X("cConstant","9a4c49" , "", "")
+  call <SID>X("cBlock","8afcd9" , "555555", "")
+  call <SID>X("cParen","fafcd9" , "f55555", "")
 
   " PHP Highlighting
   call <SID>X("phpVarSelector", s:red, "", "")
   call <SID>X("phpKeyword", s:purple, "", "")
   call <SID>X("phpRepeat", s:purple, "", "")
-  call <SID>X("phpConditional", s:purple, "", "")
+  call <SID>X("phpConditional", s:cond , "", "")
   call <SID>X("phpStatement", s:purple, "", "")
-  call <SID>X("phpMemberSelector", s:foreground, "", "")
+  call <SID>X("phpMemberSelector", s:foreground, "888888", "")
 
   " Ruby Highlighting
   call <SID>X("rubySymbol", s:task_tag, "", "")
   call <SID>X("rubyConstant", s:yellow, "", "")
   call <SID>X("rubyAttribute", s:blue, "", "")
-  call <SID>X("rubyInclude", s:blue, "", "")
-  call <SID>X("rubyStringDelimiter", s:green, "", "")
-  call <SID>X("rubyInterpolationDelimiter", s:orange, "", "")
+  call <SID>X("rubyInclude", "aa55bb" , "", "")
+  call <SID>X("rubyStringDelimiter", "99cf50" , s:bg1, "")
+  call <SID>X("rubyInterpolationDelimiter", s:orange, s:bg2 , "")
   call <SID>X("rubyConditional", s:purple, "", "")
-  call <SID>X("rubyRepeat", s:purple, "", "")
+  call <SID>X("rubyRepeat", s:purple, s:bg5 , "")
   call <SID>X("rubyClass", s:aqua, "", "")
-  call <SID>X("rubyControl", s:dark_blue, "", "")
+  call <SID>X("rubyControl", s:dark_blue, s:bg4, "")
+  call <SID>X("rubyDefine", "a08556", s:bg3, "reverse")
+  call <SID>X("rubyPredefinedConstant", "4596ff", s:bg1, "")
+  highlight rubyIdentifier            guifg=#7518a7     ctermfg=143
+  highlight rubyConstant              guifg=#72b6ef ctermfg=167
+  highlight rubyInstanceVariable      guifg=#1165c1 ctermfg=189
+  highlight rubyInterpolation         guifg=#b173d7 ctermfg=107
+  highlight rubyLocalVariableOrMethod guifg=#d9903e ctermfg=189
+  highlight rubyPseudoVariable        guifg=#4596ff ctermfg=221
 
   " Python Highlighting
   call <SID>X("pythonInclude", s:purple, "", "")
@@ -345,8 +370,11 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   call <SID>X("pythonFunction", s:blue, "", "")
 
   " HTML Highlighting
-  call <SID>X("htmlTag", s:aqua, "", "")
-  call <SID>X("htmlTagName", s:aqua, "", "")
+  call <SID>X("htmlTag", s:xml_tag, "", "")
+  call <SID>X("htmlTagName", s:xml_tag, "", "")
+  call <SID>X("xmlTag", s:xml_tag, "", "")
+  call <SID>X("xmlTagName", s:xml_tag, "", "")
+  call <SID>X("xmlEndTag", s:xml_end, "", "")
   call <SID>X("htmlSpecialTagName", s:orange, "", "")
   call <SID>X("htmlEndTag", s:aqua, "", "")
   call <SID>X("htmlTitle", "", "", "none")
@@ -423,16 +451,4 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
   endif
 endif
 
-highlight rubyIdentifier            guifg=#7518a7     ctermfg=143
-highlight rubyDefine                guifg=#3055a6
-highlight String                    guifg=#1cac00 ctermfg=107
-highlight Special                   guifg=#ab8b83 ctermfg=167 
-
-highlight rubyConstant              guifg=#72b6ef ctermfg=167
-highlight rubyInstanceVariable      guifg=#1165c1 ctermfg=189
-highlight rubyInterpolation         guifg=#b173d7 ctermfg=107
-highlight rubyLocalVariableOrMethod guifg=#d9903e ctermfg=189
-highlight rubyPredefinedConstant    guifg=#4596ff ctermfg=167
-highlight rubyPseudoVariable        guifg=#4596ff ctermfg=221
-highlight rubyStringDelimiter       guifg=#99cf50 ctermfg=143
 
